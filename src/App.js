@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import '../src/styles/style.css'
+import { Route,  Routes } from "react-router-dom";
+import Profile from './Component/Pages/Profile'  ;
+import Service from './Component/Pages/Service' ;
+import Competence from './Component/Pages/Competence' ;
+import Mecontacter from './Component/Pages/Mecontacter' ;
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+      <Routes >
+        <Route path="/" element={<Profile/>}/>
+        <Route path="/service" element={<Service/>}/>
+        <Route path="/competence" element={<Competence/>}/>
+        <Route path="/mecontacter" element={<Mecontacter/>}/>
+      </Routes>
+
+    )
+  } ;
+  
+ 
+  
+ 
 
 export default App;
