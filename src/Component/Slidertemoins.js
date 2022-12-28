@@ -3,81 +3,80 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import temoin from "../assets/temoin.jpg";
+import temoin1 from "../assets/Ellipse 5.png";
+import temoin2 from "../assets/Ellipse 6.png";
+import temoin3 from "../assets/Ellipse 11.png";
+import { BsEmojiLaughing,BsHandThumbsUpFill,BsHeartFill} from "react-icons/bs";
+
+
 
 const Contenaire = styled.div`
-  position: relative;
-  width: 90%;
-  height: 90%;
-  top:5%;
-  left:5% ;
-  background-color: #cacaca;
-  .divimg{
-    position:relative;
-    dislay:flex;
-    align-items :center ;
-    height:200px ;
-    border:2px solid black ;
+  position: abolute;
+  transform:translateX(12.5%) ;
+  height:100% ;
+  width:80% ;
+ background-color: #cacaca;
     
-    img{
-        position:relative ;
-        width:100px ;
-        height:100px ;
-        border-radius:50% ;
-        left:32% ;
-         margin-top:0.2rem ;
-    }
-    h1{
-        margin-top:0.2rem ;
-        font-size:20px ;
-    }
+ .card-wrapper{
+ position:relative ;
+  height:5rem ;
+ 
+  text-align:center ;
+  img{
+   position:relative ;
+   left:  40%  ; 
+    width:5rem ;
+    height:100% ;
+    border-radius:100% ;
+    object-fit:cover ;
+   
   }
+  h1{
+      font-size:1rem ; 
+      color:#124168 ;
+  }
+
+ }       
+ 
 `;
 const Slidertemoins = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-  };
+    autoplay: true,
+    speed: 8000,
+    autoplaySpeed: 5000,
+    cssEase: "linear"
+  }; 
   return (
     <Contenaire>
-      <Slider {...settings}>
-        <div className="divimg">
-          <img src={temoin} alt="temoin" />
-          <h1>
-          je suis satisfait du trvail en temps que collaboratrice 
-
-          </h1>
-        </div>
-        <div className="divimg">
-          <img src={temoin} alt="temoin" />
-          <h1>
-          le travailler avec toi devient encore plus superb vraiment mercie pour 
-          tes creativité
-          </h1>
-        </div>
-        <div className="divimg">
-          <img src={temoin} alt="temoin" />
-          <h1>
-          je suis satisfait du trvail bbbbbbbbzjzjzjzkzkzkzkkkzzkzk
-          </h1>
-        </div>
-        <div className="divimg">
-          <img src={temoin} alt="temoin" />
-          <h1>
-          je suis emerveiller par votre travail heureuse de travailler avec toi mon champion 
-          </h1>
-        </div>
-        <div className="divimg">
-          <img src={temoin} alt="temoin" />
-          <h1>
-          très bon boulot vous etre un bon developpeur je vous
-          admir beaucoup
-          </h1>
-        </div>
-      </Slider>
+     <Slider {...settings}>
+      <div className="card-wrapper">
+      <img src={temoin1} alt="temoin" />
+            <h1>
+              Completement  satisfaite du resultat que j'attendais 
+              tu est  le meilleurs mercie : <BsHeartFill />
+            </h1>
+       </div>
+       <div className="card-wrapper">
+       <img src={temoin2} alt="temoin" />
+            <h1>
+              chui émerveillé du trvail en temps que collaboratrice  .
+              <BsEmojiLaughing />
+            </h1>
+             
+       </div>
+       <div className="card-wrapper">
+       <img src={temoin3} alt="temoin" />
+            <h1>
+              je suis heureux de travailler avec toi tu est geniale  !
+          
+              <BsHandThumbsUpFill />
+            </h1>
+       </div>
+       </Slider>
     </Contenaire>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import styled , { createGlobalStyle , keyframes } from "styled-components"
 import Navlink from '../Navigations/Navlink';
 import imgprofile from '../../assets/ordi.jpg' 
-
+import { BiMobile,BiLaptop } from "react-icons/bi";
 const media={
   desktop124:'@media(max-width:1024px)', 
   desktop1008:'@media(max-width:1008px)', 
@@ -115,7 +115,7 @@ div{
     }
    
 }
- 
+
    
 `
 const DiveLeft = styled.div`
@@ -141,6 +141,7 @@ position: relative ;
 border-radius:10px ;
 margin-left:2px ;
 height: 100% ;
+width:80% ;
 background-color:  #002E94 ;
 ${media.desktop1008}{
   width: 100% ;
@@ -161,18 +162,17 @@ const Profile = () => {
                  <img src={imgprofile} alt='imageprofile'/>
                  <div>
                   <h1>
-                    i'm  abraham dev
+                   je suis   abraham-dev 
                   </h1>
                   <h2 className='txt1'>
-                    web developeur 
+                    web developeur <BiMobile />
                   </h2>
                   <h2 className='txt2'>
-                    mobile developeur 
+                    mobile developeur <BiLaptop /> 
                   </h2>
-                  <h1>
-                    je suis un artiste avec des imagination debordante qui ne s'arrete jamais
-
-                  </h1>
+                  <h2 className='txt1'>
+                   je satisfait vos besoins  imformatique  
+                  </h2>
                  </div>
                  
                 </Divelements>

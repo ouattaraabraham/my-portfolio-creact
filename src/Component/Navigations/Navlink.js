@@ -7,6 +7,7 @@ import {
   BsGem,
   BsFillFileCheckFill,
   BsTelephonePlus,
+  BsFillHouseDoorFill
 } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 
@@ -16,12 +17,13 @@ const media={
   tablette780:'@media(max-width:780px)',
   tablette:'@media(max-width:768px)',
   tablette650:'@media(max-width:650px)',
-  portable425:'@media(max-width:425px)'
+  portable425:'@media(max-width:425px)',
+  portable350:'@media(max-width:350px)'
 }
 
 const keyframesh1 = keyframes`
 
-to{left:-180px;}
+to{left:-298px;}
 from{left:-10px;}
 `;
 const NavlinkContainer = styled.div`
@@ -62,7 +64,7 @@ const Profilecontenaire = styled.div`
   h1 {
     position: relative;
     left: -180px;
-    width: 500px;
+    width: 578px;
     display: flex;
     text-align: center;
     font-size: 25px;
@@ -101,61 +103,80 @@ const ButtonContainer = styled.div`
     ${media.desktop1008}{
       flex-direction:row;
     }
+    ${media.tablette650}{
+      left:-1.3rem;
+    }
     ${media.portable425}{
-      flex-direction:row;
+    top:15%;
     }
   }
 
   li {
     position: relative;
-    display:flex;
-    align-items:center ;
     width: 90%;
     height: 45px;
-    border-radius: 20px;
-    background-color: #74c2e1;
     list-style-type: none;
-    ${media.desktop1024}{
-     width: 150px;
-     height: 40px;
-     left: 0;
-     border-radius: 50px;
-   }
-   ${media.tablette780}{
-    width: 154px;
-   }
+    ${media.desktop1008}{
+      width: 10rem;
+    
+    }
+    ${media.tablette650}{
+      width: 0;
+    
+    }
+  a:hover {
+      background-color:  #E1CEB5;
+      transform: scale(0.9);
+    }
+  a {
+    text-decoration: none;
+    position: relative;
+    display:flex;
+    align-items:center ;
+    width: 100%;
+    height: 45px;
+
+    background-color: #74c2e1;
+    border-radius: 50px;
+    
+    list-style-type: none;
+  
  ${media.tablette650}{
   width:64px ;
   background-color:#083AA9 ;
  }
- ${media.portable425}{
-  background-color: none;
+
+${media.portable350}{
+  width: 40px;
+}
+a:hover {
+  background-color:  #E1CEB5;
+  transform: scale(0.9);
 }
     
-  }
-
-  li:hover {
-    background-color:  #E1CEB5;
-    transform: scale(0.9);
-  }
- 
-
-  a {
-    text-decoration: none;
-    display:flex;
-    align-itmes:center ;
+    .span-competence{
+      left:-4px ;
+    }
+    .span-profil{
+      margin-top:.3rem ;
+    }
     .icons {
       position: relative;
       font-size:30px ;
       margin: 0 2px 0 4px;
       ${media.desktop1024}{
-        font-size:28px ;
+        font-size:30px ;
       }
        ${media.tablette650}{
-        
+        font-size:2.5rem ;
       }
+      ${media.portable350}{
+        font-size:2.5rem ;
+      }
+      
     }
     .icons1{
+      
        ${media.tablette650}{
         color:#E1CEB5 ;
       
@@ -181,7 +202,7 @@ const ButtonContainer = styled.div`
 
     span {
       position: relative;
-      
+      top:-2px;
       
       font-size: 1.5rem;
       text-decoration: none;
@@ -233,8 +254,8 @@ const Navlink = () => {
         <div>
           <img src={imgprofil} alt="imag" className="imgprofil" />
           <h1>
-            {" "}
-            <span>Ab-web design</span> <span>Ab-web design</span>{" "}
+          {" "}
+            <span>développeur web/mobile  </span> <span>développeur web/mobile </span>{" "}
           </h1>
         </div>
       </Profilecontenaire>
@@ -242,25 +263,25 @@ const Navlink = () => {
         <ul>
           <li>
             <NavLink to="/" className="navlinkbutton">
-              <BsAward  className="icons icons1" />
+              <BsFillHouseDoorFill color="#E67745" className="icons icons1" />
               <span className="span-profil">Profil</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/service" className="navlinkbutton">
-              <BsGem  className="icons icons2" />
+              <BsGem color="#E67745"  className="icons icons2" />
               <span className="span-service">service</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/competence" className="navlinkbutton">
-              <BsFillFileCheckFill  className="icons icons3" />
+              <BsFillFileCheckFill color="#E67745"  className="icons icons3" />
               <span className="span-competence">competence</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/mecontacter" className="navlinkbutton">
-              <BsTelephonePlus  className="icons icons4" />
+              <BsTelephonePlus color="#E67745"  className="icons icons4" />
               <span className="span-contacter">contacter</span>
             </NavLink>
           </li>

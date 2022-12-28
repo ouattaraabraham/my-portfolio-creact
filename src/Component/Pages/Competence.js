@@ -1,5 +1,5 @@
 import React from 'react';
-import styled , { createGlobalStyle , keyframes } from "styled-components"
+import styled  from "styled-components"
 import Navlink from '../Navigations/Navlink';
 import {
   FaGithub,
@@ -25,9 +25,6 @@ const media={
   portable273:'@media(max-width:273px)',
   portable233:'@media(max-width:233px)'
 }
-const StyleGlobal=createGlobalStyle`
-
-`
 
 const Contenaire=styled.div`
 display: flex; 
@@ -38,7 +35,7 @@ ${media.desktop1008}{
   width:99% ;
 }
 
-`
+`;
 const DiveLeft = styled.div`
 
 position: relactive ;
@@ -72,12 +69,21 @@ ${media.desktop1008}{
    h1{
       margin-top:2rem ;
       margin-left:2rem ;
+     color:#74c2e1 ;
+     ${media.portable520}{
+      font-size:1.5rem;
+      
+    }
    }
    p{
       
-      width:14rem;
+      width:12.1rem;
       height:2px;
-      background-color:green ;
+      background-color:#74c2e1 ;
+      ${media.portable520}{
+        width:9rem;
+        
+      }
    }
   }
   .divicons {
@@ -86,6 +92,7 @@ ${media.desktop1008}{
     grid-template-columns: auto auto auto auto;
     gap: 1rem;
     padding: 1rem;
+    margin-top:1rem;
     ${media.portable520}{
       grid-template-columns: auto auto auto;
      
@@ -103,6 +110,7 @@ ${media.desktop1008}{
       text-align: center;
       border: 2px solid #74c2e1;
       border-radius: 2px;
+      background-color:#0c156e;
 
       .icons {
         position: relative;
@@ -117,6 +125,7 @@ ${media.desktop1008}{
         font-size:1rem ;
         position:relative;
         top:.4rem ;
+        color:#74c2e1;
         ${media.portable650}{
           
         }
@@ -139,7 +148,7 @@ ${media.desktop1008}{
 const Competence = () => {
   return (
         <Contenaire>
-            <StyleGlobal/>
+          
                <DiveLeft>
                  <Navlink/>
                </DiveLeft>
@@ -152,44 +161,40 @@ const Competence = () => {
         </div>
         <div className="divicons">
           <div className="divicon">
-            <FaHtml5 className="icons icon1" />
+            <FaHtml5 color='#F53C17' className="icons icon1" />
             <h1>HTML.</h1>
           </div>
           <div className="divicon">
-            <FaCss3Alt className="icons icon2" />
-            <h1>HTML.</h1>
+            <FaCss3Alt color='#356AF0' className="icons icon2" />
+            <h1>Css.</h1>
           </div>
           <div className="divicon">
-            <FaJsSquare className="icons icon3" />
+            <FaJsSquare color='#F0E819' className="icons icon3" />
             <h1>JAVA-SCRIPT.</h1>
           </div>
           <div className="divicon">
-            <FaSass className="icons icon4" />
-            <h1>HTML.</h1>
+            <FaSass color='#FA63C6' className="icons icon4" />
+            <h1>Sass.</h1>
           </div>
           <div className="divicon">
-            <FaReact className="icons icon5" />
-            <h1>HTML.</h1>
+            <FaReact color='#508FF5' className="icons icon5" />
+            <h1>React.</h1>
           </div>
           <div className="divicon">
-            <FaHtml5 className="icons icon6" />
-            <h1>HTML.</h1>
+            <FaBootstrap color='#6E0AF0' className="icons icon7" />
+            <h1>Bootstrap.</h1>
           </div>
           <div className="divicon">
-            <FaBootstrap className="icons icon7" />
-            <h1>BOOSTRAP.</h1>
+            <FaFigma color='#760006' className="icons icon8" />
+            <h1>Figma.</h1>
           </div>
           <div className="divicon">
-            <FaFigma className="icons icon8" />
-            <h1>HTML.</h1>
+            <FaNodeJs color='#FAF55D' className="icons icon9" />
+            <h1>NodeJs.</h1>
           </div>
           <div className="divicon">
-            <FaNodeJs className="icons icon9" />
-            <h1>HTML.</h1>
-          </div>
-          <div className="divicon">
-            <FaGithub className="icons icon10" />
-            <h1>HTML.</h1>
+            <FaGithub color='' className="icons icon10" />
+            <h1>Github.</h1>
           </div>
         </div>
       </DiveRigth>
